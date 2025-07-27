@@ -1,6 +1,7 @@
+// jwtToken.js
 
-//import jwt from "jsonwebtoken";
-const sendToken = (user, statusCode, res, message) => {
+// ✅ No need to use module.exports in ES Modules
+export const sendToken = (user, statusCode, res, message) => {
     const token = user.getJWTToken();
     const options = {
         expires: new Date(
@@ -17,5 +18,3 @@ const sendToken = (user, statusCode, res, message) => {
         token,
     });
 };
-//export default sendToken;
- module.exports = { sendToken };

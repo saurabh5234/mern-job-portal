@@ -3,8 +3,8 @@ console.log(catchAsyncError); // Check if the function is correctly imported
 import ErrorHandler from "../middlewares/error.js";
 import User from "../models/userSchema.js";
 import { v2 as cloudinary } from "cloudinary";
-import pkg from "../../utils/jwtToken.js";
-const { sendToken } = pkg;
+import { sendToken } from "../utils/jwtToken.js";
+
 
 
 export const register = catchAsyncError(async (req, res, next) => {
